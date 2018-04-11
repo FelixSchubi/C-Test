@@ -1,3 +1,5 @@
+
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -10,7 +12,7 @@ int count;
         char Vo[MAX];
         double Ma;
         struct Node *ptr;
-    }*front,*rear,*tmp,*frontTMP;
+    }*front,*rear,*tmp,*frontTMP,*tmp1,*tmp2;
 // Compilerzwecke
 void add (char *na,char *vo, double Matr);
 
@@ -58,8 +60,13 @@ void add (char *na,char *vo, double Matr){
 }
 
 void askForAdd(){
+    int tmp = 0;
      printf("Die Liste ist Leer\n Student hinzufügen?\n");
          TEST:
+         if (tmp>0){
+             printf("Auf Rechtschreibung achten!\n");
+         }
+         tmp++;
         printf("Eingeben:\n Ja \t Nein\n");
         char ans[MAX];
         scanf("%s", ans);
@@ -76,6 +83,15 @@ void askForAdd(){
         }
 }
 
+void printStudent(int x){
+    printf("----------------------------------------\n");
+        printf("Student Nummer: %d\n",x);
+        printf("Name: %s \n", frontTMP->Na);
+        printf("Vorname: %s \n", frontTMP->Vo);
+        printf("Matrikelnummer: %.0lf\n", frontTMP->Ma);
+        printf("----------------------------------------\n");
+}
+
 void show(){
     frontTMP = front;
     if( frontTMP == NULL) {
@@ -85,28 +101,18 @@ void show(){
         printf("Hier Sind die Studenten:\n");
     int tmp = 1;
     while (frontTMP != rear)
-    { printf("----------------------------------------\n");
-        printf("Student Nummer: %d\n",tmp);
-        printf("Name: %s \n", frontTMP->Na);
-        printf("Vorname: %s \n", frontTMP->Vo);
-        printf("Matrikelnummer: %.0lf\n", frontTMP->Ma);
-        printf("----------------------------------------\n");
+    { 
+        printStudent(tmp);
         tmp++;
         frontTMP = frontTMP->ptr;
     }
     if (frontTMP == rear)
-    printf("----------------------------------------\n");
-    printf("Student Nummer: %d\n",tmp);
-        printf("Name: %s \n", frontTMP->Na);
-        printf("Vorname: %s \n", frontTMP->Vo);
-        printf("Matrikelnummer: %.0lf\n", frontTMP->Ma);
-        printf("----------------------------------------\n");
+        printStudent(tmp);
     }
 }
 
 void delete(){
 char n[MAX];
-struct Node *tmp1;
 
         if(front == NULL){
         askForAdd();
@@ -122,15 +128,15 @@ struct Node *tmp1;
             front = rear;
             }
          else {
-         rear=front;
-         while(rear->ptr != NULL) {
-            tmp1=rear->ptr;
+         tmp2=front;
+         while(tmp2->ptr != NULL) {
+            tmp1=tmp2->ptr;
             if(strcmp(tmp1->Na,n) == 0) {
-              rear->ptr=tmp1->ptr;
+              tmp2->ptr=tmp1->ptr;
                free(tmp1);
                break;
             }
-            rear=tmp1;
+            tmp2=tmp1;
          } 
       }   
    }      
