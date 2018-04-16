@@ -107,11 +107,11 @@ Prüft ob die Werte der Pointer gleich sind </br>
 <a href="https://github.com/FelixSchubi/C-Test/blob/master/11_16.04.2018/Database.md">Studentendatenbank</a>  </br>
 
 ## Fehler
-</br></br>
-Ersten Fehler eingebaut:
-<img src="Bilder/Bild_Fail">
-Resultat ist dann folgendens (Bei   "(i ==3)"  ):
-<img src="Bilder/Bild_Fail2.png">
+</br>
+Ersten Fehler eingebaut:<br>
+<img src="Bilder/Bild_Fail"><br>
+Resultat ist dann folgendens (Bei   "(i ==3)"  ): <br>
+<img src="Bilder/Bild_Fail2.png"><br>
 In einem Test hat man immer noch die Möglichkeit etwas über die Konsole abzufragen!
-<b>Das ist ein Test</b>
+
 
