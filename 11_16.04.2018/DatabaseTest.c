@@ -61,6 +61,9 @@ void add (char *na,char *vo, double Matr){
         rear->Ma = Matr;
         rear->ptr = NULL;
         front = rear;
+        // Strings von Pointern vergleichen
+        CU_ASSERT_STRING_EQUAL_FATAL(front->Na, na);
+        CU_ASSERT_STRING_EQUAL_FATAL(rear->Vo, front->Vo);
     }
     else {
         
@@ -95,6 +98,7 @@ void askForAdd(){
         }
         else {
             printf("Vertippt?\n");
+            CU_ASSERT_FALSE("Weder Ja noch Nein eingegeben");
             goto TEST;
         }
 }
@@ -117,6 +121,8 @@ void printStudent(int x){
 void show(){
     frontTMP = front;
     if( frontTMP == NULL) {
+ CU_ASSERT_PTR_NULL_FATAL(front);
+
       askForAdd();
     }
     else{
@@ -124,11 +130,12 @@ void show(){
     int tmp = 1;
     while (frontTMP != NULL)
     { 
-        printStudent(tmp);
+       printStudent(tmp);
         tmp++;
         frontTMP = frontTMP->ptr;
     }
     if (frontTMP == rear)
+    CU_ASSERT_PTR_NULL_FATAL()
          printStudent(tmp);
      }
 }
