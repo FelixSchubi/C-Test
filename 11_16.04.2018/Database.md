@@ -24,7 +24,7 @@ Wie sollen obige Funktionen getestet werden? Zu..
 1. CU_PASS("mainFunc() gestartet") bei erfolgreichem Start.
 Die globale Variable secTest wird beim Start auf 0 gesetzt.
 2. Wie struct Node getestet werden soll ist noch unklar?
-3. Wenn die create() Funktion gestartet wird, bekommt die globe Variable "test" den Wert 1. Durch folgenden Test in der mainFunc() Funktion wird sichergestellt, ob eine Veränderung der Variable Test auf 1 stattgefunden hat. Zusätzlich wird überprüft, ob der Pointer front den Wert NULL besitzt: </br>
+3. Wenn die create() Funktion gestartet wird, bekommt die globe Variable "test" den Wert 1. Durch folgenden Test in der mainFunc() Funktion nach aufrufen von create wird sichergestellt, ob eine Veränderung der Variable Test auf 1 stattgefunden hat. Zusätzlich wird überprüft, ob der Pointer front den Wert NULL besitzt: </br>
 <b>if (test = 1){</br>
         CU_ASSERT_PTR_NULL(front);</br>
         CU_PASS("create()function");</br>

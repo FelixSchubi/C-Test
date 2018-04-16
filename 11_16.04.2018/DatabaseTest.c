@@ -100,12 +100,18 @@ void askForAdd(){
 }
 
 void printStudent(int x){
+    CU_ASSERT_PTR_NOT_NULL(frontTMP->Na);
+    if (frontTMP->Na == NULL){
+        return;
+    }
+    else {
     printf("----------------------------------------\n");
         printf("Student Nummer: %d\n",x);
         printf("Name: %s \n", frontTMP->Na);
         printf("Vorname: %s \n", frontTMP->Vo);
         printf("Matrikelnummer: %.0lf\n", frontTMP->Ma);
         printf("----------------------------------------\n");
+}
 }
 
 void show(){
@@ -116,15 +122,15 @@ void show(){
     else{
         printf("Hier Sind die Studenten:\n");
     int tmp = 1;
-    while (frontTMP != rear)
+    while (frontTMP != NULL)
     { 
         printStudent(tmp);
         tmp++;
         frontTMP = frontTMP->ptr;
     }
     if (frontTMP == rear)
-        printStudent(tmp);
-    }
+         printStudent(tmp);
+     }
 }
 
 void delete(){
@@ -177,7 +183,8 @@ char n[MAX];
     printf("3. Delete\n");
     printf("4. Amount\n");
     printf("0. Stop\n");
-   // buildNode();
+   // buildNode();1
+   
     create();
 
     if (test = 1){
