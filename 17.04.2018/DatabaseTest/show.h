@@ -7,7 +7,7 @@
 
 void sh(){
 
-struct Node * tmp = dazu();
+ // struct Node * tmp = dazu();
 
 
     frontTMP = front;

@@ -3,7 +3,7 @@
 #include "add.h"
 
 void priStu(){
-    struct Node * tmp = dazu();
+   // struct Node * tmp = dazu();
 
 
 printf("printStudenten\n");
@@ -12,7 +12,7 @@ printf("printStudenten\n");
     //     return;
     // }
     // else {
-        
+
     printf("----------------------------------------\n");
       //  printf("Student Nummer: %d\n",x);
         printf("Name: %s \n", frontTMP->Na);
