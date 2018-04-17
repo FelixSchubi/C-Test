@@ -4,7 +4,6 @@ Als Standart .c Datei ohne zusätzliche Tests.<br>
 <a href="https://github.com/FelixSchubi/C-Test/tree/master/16.04.2018/Database">Hier!<a> <br>
 
 - Bei begin.h durfte die Funktion nicht den gleichen Namen haben wie die Datei?  ??Warum nur hier?? 
-    -> Bei "Mit Test" war es überall so!
 - Das "User Interface" funktioniert soweit wieder
 - Man kann mehrere Studenten eingeben
 - Bei show() wird angezeigt dass die Liste leer ist 

@@ -2,15 +2,13 @@
 #define show
 #include "askForAdd.h"
 #include "printStudent.h"
+#include "add.h"
+
 
 void sh(){
 
-    struct Node {
-        char Na[MAX];
-        char Vo[MAX];
-        double Ma;
-        struct Node *ptr;
-    }*front,*rear,*tmp,*frontTMP,*tmp1,*tmp2;
+struct Node * tmp = dazu();
+
 
     frontTMP = front;
     if( frontTMP == NULL) {
@@ -19,14 +17,14 @@ void sh(){
     }
     else{
         printf("Hier Sind die Studenten:\n");
-    int tmp = 1;
-    while (frontTMP != NULL)
-    { 
-       priStu();
-        tmp++;
-        frontTMP = frontTMP->ptr;
-    }
-    if (frontTMP == rear)
+
+    //  while (frontTMP != NULL)
+    // { 
+    //    priStu();
+      
+    //     frontTMP = frontTMP->ptr;
+    // }
+    if (frontTMP != NULL)
          priStu();
      }
 }

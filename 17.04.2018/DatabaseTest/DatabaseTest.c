@@ -25,12 +25,27 @@ void testCreate(){
 }
 
 void testDazu(){
-   struct Node * tmp = dazu();
-   
+    struct Node * tmp = dazu();
+   // es wird geprüft ob der Pointer noch NULL ist
+    CU_ASSERT_PTR_NOT_NULL(front);
+    // haben die Pointer front und rear die gleichen Werte?
+    CU_ASSERT_STRING_EQUAL(front->Na, rear->Na);
    printf("\nHier ist der Name: %s\n",front->Na);
-
 }
 
+/*
+void testAsFoAdd(){
+    asFoAd();
+        // Ab hier dürfen die Strings nicht mehr gleich sein!!
+            CU_ASSERT_STRING_NOT_EQUAL(front->Na, rear->Na);
+                  printf("\nHier ist der Name: %s\n",rear->Na); 
+
+}
+*/
+
+void testShow(){
+    sh();
+}
 
 int main()
 {
@@ -49,8 +64,10 @@ int main()
 if ((NULL == CU_add_test(pSuite, "create", testCreate))
     ||
     (NULL == CU_add_test(pSuite, "add", testDazu))
+  //  ||
+  //  (NULL == CU_add_test(pSuite, "askForAdd", testAsFoAdd)
     ||
-    (NULL == CU_add_test(pSuite, "askForAdd", asFoAd)))
+    (NULL == CU_add_test(pSuite, "show", testShow) ))
    {
       CU_cleanup_registry();
       return CU_get_error();
