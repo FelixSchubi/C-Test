@@ -19,18 +19,31 @@ int init_suite(void)
 int clean_suite(void)
 {return 0;}
 
+
+
 void testCreate(){
     // Create Funktion muss erst mit Node verknüpft werden
     start();
 }
 
 void testDazu(){
-    struct Node * tmp = dazu();
+    
    // es wird geprüft ob der Pointer noch NULL ist
     CU_ASSERT_PTR_NOT_NULL(front);
     // haben die Pointer front und rear die gleichen Werte?
     CU_ASSERT_STRING_EQUAL(front->Na, rear->Na);
    printf("\nHier ist der Name: %s\n",front->Na);
+   int i = 0;
+   printf("Wie viele Einheiten sollen eingegeben werden?\n");
+   scanf("%d", &i);
+   for(int x = 0; x < i; x++){
+    printf("%d.ter Student: \n", x+1);   
+   dazu();
+   }
+}
+
+void testDel(){
+    del();
 }
 
 /*
@@ -60,6 +73,7 @@ int main()
       return CU_get_error();
    }
 
+ struct Node * tmp = dazu();
 
 if ((NULL == CU_add_test(pSuite, "create", testCreate))
     ||
@@ -67,7 +81,11 @@ if ((NULL == CU_add_test(pSuite, "create", testCreate))
   //  ||
   //  (NULL == CU_add_test(pSuite, "askForAdd", testAsFoAdd)
     ||
-    (NULL == CU_add_test(pSuite, "show", testShow) ))
+    (NULL == CU_add_test(pSuite, "show", testShow)
+    ||  // Testen, ob das löschen funktionert!
+    (NULL == CU_add_test(pSuite, "show", testDel)
+    ||  // Nochmal anzeigen lassen um löschen zu überprüfen
+    (NULL == CU_add_test(pSuite, "show", testShow) ))))
    {
       CU_cleanup_registry();
       return CU_get_error();

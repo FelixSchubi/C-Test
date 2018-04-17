@@ -18,12 +18,12 @@ void sh(){
     else{
         printf("Hier Sind die Studenten:\n");
 
-    //  while (frontTMP != NULL)
-    // { 
-    //    priStu();
+      while (frontTMP != NULL)
+     { 
+        priStu();
       
-    //     frontTMP = frontTMP->ptr;
-    // }
+         frontTMP = frontTMP->ptr;
+     }
     if (frontTMP != NULL)
          priStu();
      }
