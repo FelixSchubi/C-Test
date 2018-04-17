@@ -2,14 +2,18 @@
 #define add
 #define MAX 20
 
-void dazu(){
 
-        struct Node {
+ struct Node {
         char Na[MAX];
         char Vo[MAX];
         double Ma;
         struct Node *ptr;
     }*front,*rear,*tmp,*frontTMP,*tmp1,*tmp2;
+
+
+struct Node *dazu(){
+
+       
 
     char name[MAX];
 char vname[MAX];
@@ -44,7 +48,7 @@ double matr;
         tmp->ptr = NULL;
         rear = tmp; 
         }
-    
+   return front;
 }
 
 #endif

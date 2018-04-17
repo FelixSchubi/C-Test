@@ -1,7 +1,7 @@
 #ifndef askForAdd
 #define askForAdd
-
-#import "add.h"
+#define MAX 20
+#include "add.h"
 
 void asFoAd(){
 

@@ -15,10 +15,17 @@ Fehlermeldung: <br>
 <img src="../Bilder/ArchitectureFailed.png">
   
 # Mit Test
+
 Die Funktionen werden hier erneut benutzt; nur diesmal wird das Framework CUnit zum Testen der Funktionen verwendet. <br>
 <a href="https://github.com/FelixSchubi/C-Test/tree/master/16.04.2018/DatabaseTest">Hier!<a> <br>
-C-Unit for Mac: <a href="http://macappstore.org/cunit/">Download!<a>
+C-Unit for Mac: <a href="http://macappstore.org/cunit/">Download!<a> <br>
+Man darf nur eine Art von Test machen ansonsten "Bus error 10"! <br>
+Wie man <a href="https://stackoverflow.com/questions/34377423/c-return-struct-pointer/34377872">Pointer<a> zurückgibt (Zum Testen) <br>
+
   
 ### Schritte
+
+´´´ bash
 - https://stackoverflow.com/questions/5128664/how-to-split-a-c-program-into-multiple-files <br>
 Ist es notwendig drei Dateien zu erstellen? bzw. zwei eine .h & .c ??
+´´´
