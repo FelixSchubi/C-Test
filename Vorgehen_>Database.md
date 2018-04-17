@@ -12,7 +12,7 @@ https://books.google.de/books?id=HeVuBAAAQBAJ&pg=PA236&lpg=PA236&dq=c+handle+str
 
 // Es wird eine process_node.c erstellt! Es wird versucht nur eine Node zu erstellen, auf welche jeder zugreifen kann.
 Fehlermeldung: <br>
-<img src="../Bilder/ArchitectureFailed.png">
+<img src="Bilder/ArchitectureFailed.png">
   
 # Mit Test
 
@@ -25,7 +25,7 @@ Wie man <a href="https://stackoverflow.com/questions/34377423/c-return-struct-po
   
 ### Schritte
 
-´´´ bash
-- https://stackoverflow.com/questions/5128664/how-to-split-a-c-program-into-multiple-files <br>
+``` bash
+- https://stackoverflow.com/questions/5128664/how-to-split-a-c-program-into-multiple-files 
 Ist es notwendig drei Dateien zu erstellen? bzw. zwei eine .h & .c ??
-´´´
+```
