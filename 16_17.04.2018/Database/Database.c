@@ -9,6 +9,7 @@
 #include "printStudent.h"
 #include "askForAdd.h"
 #include "add.h"
+#include "begin.h"
 
 #define MAX 20
 
@@ -19,11 +20,9 @@ int count;
         char Vo[MAX];
         double Ma;
         struct Node *ptr;
-    }*front,*rear,*tmp,*frontTMP,*tmp1,*tmp2;
+    }*front, *rear,*tmp,*frontTMP,*tmp1,*tmp2;
 
-// void start(){
-//     front = rear = NULL;
-// }
+
 
 void amount(){
     printf("Anzahl der Studenten:\t%d\n", count);
@@ -39,7 +38,7 @@ char n[MAX];
     printf("3. Delete\n");
     printf("4. Amount\n");
     printf("0. Stop\n");
-   // start();
+    start();
     while(1) {
         printf("Todo?\n");
         scanf("%d", &sw);
