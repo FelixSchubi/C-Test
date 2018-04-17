@@ -39,6 +39,7 @@ void testDazu(){
    for(int x = 0; x < i; x++){
     printf("%d.ter Student: \n", x+1);   
    dazu();
+   CU_ASSERT_STRING_NOT_EQUAL(front->Na, rear->Na);
    }
 }
 

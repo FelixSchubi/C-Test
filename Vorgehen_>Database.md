@@ -8,8 +8,17 @@ Als Standart .c Datei ohne zusätzliche Tests.<br>
 - Man kann mehrere Studenten eingeben
 - Bei show() wird angezeigt dass die Liste leer ist 
 - Bei delete() wird, egal was eingegeben wird, // Segmentation fault:11 // angezeigt
-https://books.google.de/books?id=HeVuBAAAQBAJ&pg=PA236&lpg=PA236&dq=c+handle+struct+node+between+different+files&source=bl&ots=CxaGq6hGn6&sig=zwQpPIHKP29G-RXsCRPP3mlWpBg&hl=de&sa=X&ved=0ahUKEwjqmZXH1MDaAhVGJ8AKHUzFBgoQ6AEIRzAD#v=onepage&q=c%20handle%20struct%20node%20between%20different%20files&f=false (Könnte für später nützlich werden..)
 
+## Linksammlung
+https://books.google.de/books?id=HeVuBAAAQBAJ&pg=PA236&lpg=PA236&dq=c+handle+struct+node+between+different+files&source=bl&ots=CxaGq6hGn6&sig=zwQpPIHKP29G-RXsCRPP3mlWpBg&hl=de&sa=X&ved=0ahUKEwjqmZXH1MDaAhVGJ8AKHUzFBgoQ6AEIRzAD#v=onepage&q=c%20handle%20struct%20node%20between%20different%20files&f=false (Könnte für später nützlich werden..)
+- http://people.cs.aau.dk/~bnielsen/TOV07/lektioner/cunit-intro-07.pdf ("Intro")
+- http://wpollock.com/CPlus/CUnitNotes
+- https://linux.die.net/man/3/cunit
+- https://books.google.de/books?id=8cN2BgAAQBAJ&printsec=frontcover&hl=de&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false (Beispiele in C#)
+- https://link.springer.com/book/10.1007/b106767  " Formal Approaches to Software Testing  "
+
+- https://nemequ.github.io/munit/ (Another Testing Framework)
+<br>
 // Es wird eine process_node.c erstellt! Es wird versucht nur eine Node zu erstellen, auf welche jeder zugreifen kann.
 Fehlermeldung: <br>
 <img src="Bilder/ArchitectureFailed.png">
