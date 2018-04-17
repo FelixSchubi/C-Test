@@ -3,17 +3,12 @@
 #define MAX 20
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "process_node.c"
 
 
 void addFunc() {
 
-struct Node {
-        char Na[MAX];
-        char Vo[MAX];
-        double Ma;
-        struct Node *ptr;
-    }*front,*rear,*tmp,*frontTMP,*tmp1,*tmp2;
+
 
 
     char name[MAX];

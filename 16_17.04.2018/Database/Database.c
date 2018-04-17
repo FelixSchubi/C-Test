@@ -10,17 +10,12 @@
 #include "askForAdd.h"
 #include "add.h"
 #include "begin.h"
+#include "process_node.c"
 
 #define MAX 20
 
 int count;
 
- extern struct Node {
-        char Na[MAX];
-        char Vo[MAX];
-        double Ma;
-        struct Node *ptr;
-    }*front, *rear,*tmp,*frontTMP,*tmp1,*tmp2;
 
 
 

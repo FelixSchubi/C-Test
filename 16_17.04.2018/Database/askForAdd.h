@@ -8,12 +8,7 @@
 
 void askForAddFunc(){
 
-struct Node {
-        char Na[MAX];
-        char Vo[MAX];
-        double Ma;
-        struct Node *ptr;
-    }*front,*rear,*tmp,*frontTMP,*tmp1,*tmp2;
+#include "process_node.c"
 
 
     int tmpSc = 0;

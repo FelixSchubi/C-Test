@@ -2,6 +2,7 @@
 #define printStudent
 #include <stdio.h>
 #include <stdlib.h>
+#include "process_node.c"
 
  void printStudentFunc(){
      printf("Hier ist printStudentFunc\n");

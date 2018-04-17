@@ -3,17 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "askForAdd.h"
-
+#include "process_node.c"
 
 
 void deleteFunc(){
 
-struct Node {
-        char Na[MAX];
-        char Vo[MAX];
-        double Ma;
-        struct Node *ptr;
-    }*front,*rear,*tmp,*frontTMP,*tmp1,*tmp2;
 
 
 char n[MAX];

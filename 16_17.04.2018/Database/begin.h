@@ -4,8 +4,7 @@
 #include <stdlib.h>
 #define MAX 20
 
-struct Node *front;
-struct Node *rear;
+#include "process_node.c"
 
 void start(){
     front = rear = NULL;
