@@ -16,7 +16,28 @@ https://books.google.de/books?id=HeVuBAAAQBAJ&pg=PA236&lpg=PA236&dq=c+handle+str
 - https://linux.die.net/man/3/cunit
 - https://books.google.de/books?id=8cN2BgAAQBAJ&printsec=frontcover&hl=de&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false (Beispiele in C#)
 - https://link.springer.com/book/10.1007/b106767  " Formal Approaches to Software Testing  "
+<br> <br>
+ Gute Info's: http://www.informatik-aktuell.de/entwicklung/methoden/gute-unit-tests-und-testgetriebene-entwicklung-tdd.html
+ <br>
+Warum wird getestet?
+- Ursachen für Fehler werden gesucht und Verhalten wird getestet
+- Ein neuer Teil wurde hinzugefügt und es soll eine einwandfreie Funktionsweise nachgewiesen werden (Gut mit Unit Tests)
+- Es werden im Vorfeld Tests definiert um später die richtigen Dinge zu implementieren (Gut mit Unit Tests)
 
+``` bash
+Unit-Test sind ein Verfahren, um das Verhalten einer Komponente isoliert, d.h. ohne ihre Abhängigkeiten zu anderen Komponenten, zu überprüfen.
+```
+
+Am besten sollte pro Test immer nur eine einzige Funktion getestet werden!!
+    -> Ansonsten kommt die Frage auf, wo der der Fehler liegt und wann er genau auftritt.
+
+``` bash
+Ein Unit-Test testet einen einzelnen Aspekt einer Komponente
+```
+
+
+
+<br> <br>
 - https://nemequ.github.io/munit/ (Another Testing Framework)
 <br>
 // Es wird eine process_node.c erstellt! Es wird versucht nur eine Node zu erstellen, auf welche jeder zugreifen kann.
