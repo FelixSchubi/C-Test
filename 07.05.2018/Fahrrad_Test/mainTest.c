@@ -115,7 +115,7 @@ if ((NULL == CU_add_test(pSuite, "create", testCreate))
    printf("\n\n");
 
    /* Run all tests using the automated interface */
-   CU_automated_run_tests();
+ //  CU_automated_run_tests();
    CU_list_tests_to_file();
 
    /* Run all tests using the console interface */

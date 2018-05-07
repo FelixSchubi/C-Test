@@ -5,8 +5,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <assert.h>
 
 #define MAX 20
+
 
 struct Fahrrad {
     double Rahmennummer;
@@ -19,13 +21,15 @@ void create(){
 }
 
 void add(char *bikeName, double bikeNumber) {
+    
     if(front == NULL) {
-        rear = malloc(sizeof(struct Fahrrad));
-        rear->Rahmennummer = bikeNumber;
-        strcpy(rear->Name, bikeName);
-        rear->next = NULL;
-        front = rear;
-    } 
+        tmp = malloc(sizeof(struct Fahrrad));
+        tmp->Rahmennummer = bikeNumber;
+        strcpy(tmp->Name, bikeName);
+        tmp->next = NULL;
+        front = tmp;
+
+    }
     else {
         tmp = front;
         while(tmp->next != NULL) {
@@ -36,8 +40,12 @@ void add(char *bikeName, double bikeNumber) {
         strcpy(tmp2->Name, bikeName);
         tmp2->next = NULL;
         tmp->next = tmp2;
-   }
+       
+    }    
 }
+
+
+
 
 void show(){
     tmp = front;
@@ -50,10 +58,10 @@ void show(){
         printf("Nummer: \t%.0lf\n", tmp->Rahmennummer);
         tmp = tmp->next;
     }
-    if(tmp->next == NULL) {
+ 
           printf("Name: \t%s\n", tmp->Name);
         printf("Nummer: \t%.0lf\n", tmp->Rahmennummer);
-    }
+ 
     }
 }
 

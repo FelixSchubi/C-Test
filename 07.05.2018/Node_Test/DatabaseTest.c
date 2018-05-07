@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include "delete.h"
 #include "show.h"
-#include "add_a_b.h"
+#include "printStudent.h"
+#include "askForAdd.h"
 #include "add.h"
 #include "create.h"
 
@@ -14,10 +15,7 @@
 
 #define MAX 20
 
-int i = 0; 
-char fName[MAX];
-double fNummer;
-
+int i = 0;
 int init_suite(void)
 {return 0;}
 
@@ -27,42 +25,47 @@ int clean_suite(void)
 
 
 void testCreate(){
-       
-    create_Fkt();
-    CU_ASSERT_PTR_NOT_NULL_FATAL(front);
-}
-
-void testAdd_a_b(){
-printf("Nach Wem: ?\n");
-                    scanf("%s", fName);
-                    getchar();
-    addAfter_Before_Fkt(fName);
+    // Create Funktion muss erst mit Node verknüpft werden
+    start();
 }
 
 void testDazu(){
-   
-    printf("Name: ?\n");
-                    scanf("%s", fName);
-                    getchar();
-                    printf("Nummer: ?\n");
-                    scanf("%lf", &fNummer);
-    add_Fkt(fName, fNummer);
+    
+   // es wird geprüft ob der Pointer noch NULL ist
+    CU_ASSERT_PTR_NOT_NULL(front);
+    // haben die Pointer front und rear die gleichen Werte?
+    CU_ASSERT_STRING_EQUAL(front->Na, rear->Na);
+   printf("\nHier ist der Name: %s\n",front->Na);
+   int i = 0;
+   printf("Wie viele Einheiten sollen eingegeben werden?\n");
+   scanf("%d", &i);
+   for(int x = 0; x < i; x++){
+    printf("%d.ter Student: \n", x+2);   
+   dazu();
+   CU_ASSERT_STRING_NOT_EQUAL(front->Na, rear->Na);
+   }
 }
 
 void testDel(){
-
-    printf("Wer soll gelöscht werden?");
-scanf("%s", fName);
-        getchar();
-
-    delete_Fkt(fName);
+int tmp = count;
+    del();
+    CU_ASSERT_EQUAL_FATAL((tmp-1),count);
+    printf("tmp: \t%d \n count:\t %d\n", tmp,count);
 }
 
+/*
+void testAsFoAdd(){
+    asFoAd();
+        // Ab hier dürfen die Strings nicht mehr gleich sein!!
+            CU_ASSERT_STRING_NOT_EQUAL(front->Na, rear->Na);
+                  printf("\nHier ist der Name: %s\n",rear->Na); 
 
+}
+*/
 
 void testShow(){
-   // CU_ASSERT_PTR_NOT_NULL_FATAL(front);
-        show_Fkt();
+    CU_ASSERT_PTR_NOT_NULL_FATAL(front);
+    sh();
 }
 
 int main()
@@ -78,16 +81,11 @@ int main()
       return CU_get_error();
    }
 
+ struct Node * tmp = dazu();
 
 if ((NULL == CU_add_test(pSuite, "create", testCreate))
     ||
     (NULL == CU_add_test(pSuite, "add", testDazu))
-      ||
-    (NULL == CU_add_test(pSuite, "add", testDazu))
-      ||
-    (NULL == CU_add_test(pSuite, "add", testDazu))
-    ||
-    (NULL == CU_add_test(pSuite, "addAfter", testAdd_a_b))
   //  ||
   //  (NULL == CU_add_test(pSuite, "askForAdd", testAsFoAdd)
     ||
@@ -109,9 +107,9 @@ if ((NULL == CU_add_test(pSuite, "create", testCreate))
 
  /* Run all tests using the basic interface */
    CU_basic_set_mode(CU_BRM_VERBOSE);
-//    CU_basic_run_tests();
-//    printf("\n");
-//    CU_basic_show_failures(CU_get_failure_list());
+   CU_basic_run_tests();
+   printf("\n");
+   CU_basic_show_failures(CU_get_failure_list());
    printf("\n\n");
 
    /* Run all tests using the automated interface */
