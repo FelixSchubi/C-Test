@@ -17,7 +17,12 @@ https://books.google.de/books?id=HeVuBAAAQBAJ&pg=PA236&lpg=PA236&dq=c+handle+str
 - https://books.google.de/books?id=8cN2BgAAQBAJ&printsec=frontcover&hl=de&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false (Beispiele in C#)
 - https://link.springer.com/book/10.1007/b106767  " Formal Approaches to Software Testing  "
 <br> <br>
- Gute Info's: http://www.informatik-aktuell.de/entwicklung/methoden/gute-unit-tests-und-testgetriebene-entwicklung-tdd.html
+Working with .patch files_>Strange/CUnit-patch: https://www.cyberciti.biz/faq/appy-patch-file-using-patch-command/
+<br>
+Netbeans automatiesierte Tests :https://netbeans.org/kb/docs/cnd/c-unit-test.html
+
+ <br>
+<br> Gute Info's: http://www.informatik-aktuell.de/entwicklung/methoden/gute-unit-tests-und-testgetriebene-entwicklung-tdd.html
  <br>
 Warum wird getestet?
 - Ursachen für Fehler werden gesucht und Verhalten wird getestet
