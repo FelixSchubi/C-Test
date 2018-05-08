@@ -19,3 +19,10 @@ Und zum Schluss der Ordner Test Files, in dem man verschiedene CUnit Tests anleg
 Diese erstellt man entweder vollständig selbt oder man nutzt die von NetBeans zur Verfügung gestellte Möglichkeit: </br>
 <img src="https://github.com/FelixSchubi/C-Test/blob/master/NetBeans/Dokumentation/CreateTest.png" height="250px"> </br>
 Das ist natürlich nicht nur bei einer einzelnen Header Datein möglich sonder auch bei der Source File!
+
+### Issues
+
+Wenn man die Header Files in der Source- und den Test Files einbindet bekommt man folgende Fehlermeldung: </br>
+<img src="https://github.com/FelixSchubi/C-Test/blob/master/NetBeans/Dokumentation/Fehler.png" height="300px"> </br>
+
+
