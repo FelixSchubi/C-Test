@@ -42,11 +42,13 @@ TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
 
 # Test Files
 TESTFILES= \
-	${TESTDIR}/TestFiles/f1
+	${TESTDIR}/TestFiles/f1 \
+	${TESTDIR}/TestFiles/f2
 
 # Test Object Files
 TESTOBJECTFILES= \
-	${TESTDIR}/tests/newcunittest.o
+	${TESTDIR}/tests/Main_Test_File.o \
+	${TESTDIR}/tests/secSuite.o
 
 # C Compiler Flags
 CFLAGS=
@@ -84,15 +86,25 @@ ${OBJECTDIR}/MainFile.o: MainFile.c
 .build-tests-conf: .build-tests-subprojects .build-conf ${TESTFILES}
 .build-tests-subprojects:
 
-${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/newcunittest.o ${OBJECTFILES:%.o=%_nomain.o}
+${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/Main_Test_File.o ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.c} -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS}   -lcunit 
 
+${TESTDIR}/TestFiles/f2: ${TESTDIR}/tests/secSuite.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.c} -o ${TESTDIR}/TestFiles/f2 $^ ${LDLIBSOPTIONS}   -lcunit 
 
-${TESTDIR}/tests/newcunittest.o: tests/newcunittest.c 
+
+${TESTDIR}/tests/Main_Test_File.o: tests/Main_Test_File.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/newcunittest.o tests/newcunittest.c
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/Main_Test_File.o tests/Main_Test_File.c
+
+
+${TESTDIR}/tests/secSuite.o: tests/secSuite.c 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/secSuite.o tests/secSuite.c
 
 
 ${OBJECTDIR}/MainFile_nomain.o: ${OBJECTDIR}/MainFile.o MainFile.c 
@@ -113,6 +125,7 @@ ${OBJECTDIR}/MainFile_nomain.o: ${OBJECTDIR}/MainFile.o MainFile.c
 	@if [ "${TEST}" = "" ]; \
 	then  \
 	    ${TESTDIR}/TestFiles/f1 || true; \
+	    ${TESTDIR}/TestFiles/f2 || true; \
 	else  \
 	    ./${TEST} || true; \
 	fi

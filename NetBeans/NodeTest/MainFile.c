@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "weg.h"
-#include "show.h"
-#include "add_a_b.h"
-#include "add.h"
-#include "create.h"
+//#include "weg.h"
+//#include "show.h"
+//#include "add_a_b.h"
+//#include "add.h"
+//#include "create.h"
 
 
 
