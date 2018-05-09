@@ -29,6 +29,11 @@ Wenn man die Header Files in der Source- und den Test Files einbindet bekommt ma
 Um das Problem vorrübergehend zu lösen wird während den Tests der Funktionsaufruf auskommentiert.</br>
 Wenn man nur das Programm selbst starten will stört es nicht wenn der Test normal bestehen bleibt. </br>
 </br>
-Für die bessere Übersicht wird für jede Funktion eine eigene Suite erstellt in der sie getestet wird.
+Für die bessere Übersicht wird für jede Funktion eine eigene Suite erstellt in der sie getestet wird. </br>
+Das Ganze sieht dann in etwa so aus; </br>
+<img src="https://github.com/FelixSchubi/C-Test/blob/master/NetBeans/Dokumentation/TestsFunc.png"> </br>
+So hat man zusätzlich die Möglichkeit entweder alle Tests auf einmal zu starten, oder auch nur einen. </br>
 
+# Endresultat:
 
+<img src="https://github.com/FelixSchubi/C-Test/blob/master/NetBeans/Dokumentation/Endresult.png">
