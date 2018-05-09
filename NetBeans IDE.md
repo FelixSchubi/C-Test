@@ -24,5 +24,11 @@ Das ist natürlich nicht nur bei einer einzelnen Header Datein möglich sonder a
 
 Wenn man die Header Files in der Source- und den Test Files einbindet bekommt man folgende Fehlermeldung: </br>
 <img src="https://github.com/FelixSchubi/C-Test/blob/master/NetBeans/Dokumentation/Fehler.png" height="300px"> </br>
+</br>
+### Problem Handling
+Um das Problem vorrübergehend zu lösen wird während den Tests der Funktionsaufruf auskommentiert.</br>
+Wenn man nur das Programm selbst starten will stört es nicht wenn der Test normal bestehen bleibt. </br>
+</br>
+Für die bessere Übersicht wird für jede Funktion eine eigene Suite erstellt in der sie getestet wird.
 
 
