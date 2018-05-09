@@ -67,14 +67,23 @@ Contributor(s):
                    displayName="Test Files"
                    projectFiles="false"
                    kind="TEST_LOGICAL_FOLDER">
-      <logicalFolder name="f1"
-                     displayName="Main_Test_Folder"
+      <logicalFolder name="f1" displayName="addSuite" projectFiles="true" kind="TEST">
+        <itemPath>tests/addTest.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3"
+                     displayName="createSuite"
                      projectFiles="true"
                      kind="TEST">
-        <itemPath>tests/Main_Test_File.c</itemPath>
+        <itemPath>tests/createTest.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="f2" displayName="SecSuite" projectFiles="true" kind="TEST">
-        <itemPath>tests/secSuite.c</itemPath>
+      <logicalFolder name="f4"
+                     displayName="showSuite"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/showTest.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f5" displayName="wegSuite" projectFiles="true" kind="TEST">
+        <itemPath>tests/wegTest.c</itemPath>
       </logicalFolder>
     </logicalFolder>
   </logicalFolder>
@@ -104,9 +113,25 @@ Contributor(s):
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <folder path="TestFiles/f2">
+      <folder path="TestFiles/f3">
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f2</output>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f5">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f5</output>
           <linkerLibItems>
             <linkerOptionItem>-lcunit</linkerOptionItem>
           </linkerLibItems>
@@ -114,9 +139,13 @@ Contributor(s):
       </folder>
       <item path="show.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="tests/Main_Test_File.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/addTest.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="tests/secSuite.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/createTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/showTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/wegTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="weg.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -153,9 +182,25 @@ Contributor(s):
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <folder path="TestFiles/f2">
+      <folder path="TestFiles/f3">
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f2</output>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f5">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f5</output>
           <linkerLibItems>
             <linkerOptionItem>-lcunit</linkerOptionItem>
           </linkerLibItems>
@@ -163,9 +208,13 @@ Contributor(s):
       </folder>
       <item path="show.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="tests/Main_Test_File.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/addTest.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="tests/secSuite.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/createTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/showTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/wegTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="weg.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -202,9 +251,25 @@ Contributor(s):
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <folder path="TestFiles/f2">
+      <folder path="TestFiles/f3">
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f2</output>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f5">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f5</output>
           <linkerLibItems>
             <linkerOptionItem>-lcunit</linkerOptionItem>
           </linkerLibItems>
@@ -212,9 +277,13 @@ Contributor(s):
       </folder>
       <item path="show.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="tests/Main_Test_File.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/addTest.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="tests/secSuite.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/createTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/showTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/wegTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="weg.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -251,9 +320,25 @@ Contributor(s):
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <folder path="TestFiles/f2">
+      <folder path="TestFiles/f3">
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f2</output>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f5">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f5</output>
           <linkerLibItems>
             <linkerOptionItem>-lcunit</linkerOptionItem>
           </linkerLibItems>
@@ -261,9 +346,13 @@ Contributor(s):
       </folder>
       <item path="show.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="tests/Main_Test_File.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/addTest.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="tests/secSuite.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/createTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/showTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/wegTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="weg.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -295,9 +384,25 @@ Contributor(s):
           </linkerLibItems>
         </linkerTool>
       </folder>
-      <folder path="TestFiles/f2">
+      <folder path="TestFiles/f3">
         <linkerTool>
-          <output>${TESTDIR}/TestFiles/f2</output>
+          <output>${TESTDIR}/TestFiles/f3</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f4">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f4</output>
+          <linkerLibItems>
+            <linkerOptionItem>-lcunit</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </folder>
+      <folder path="TestFiles/f5">
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f5</output>
           <linkerLibItems>
             <linkerOptionItem>-lcunit</linkerOptionItem>
           </linkerLibItems>
@@ -305,9 +410,13 @@ Contributor(s):
       </folder>
       <item path="show.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="tests/Main_Test_File.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/addTest.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="tests/secSuite.c" ex="false" tool="0" flavor2="0">
+      <item path="tests/createTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/showTest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/wegTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="weg.h" ex="false" tool="3" flavor2="0">
       </item>

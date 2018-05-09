@@ -20,7 +20,7 @@ double fNummer;
 int main()
 {
     int sw;
-  //  create_Fkt();
+ //   create_Fkt();
     printf("1. Add\n");
     printf("2. Add_After\n");
     printf("3. Delete\n");
@@ -35,7 +35,7 @@ while(1) {
                 getchar();
                 printf("Nummer?\n");
                 scanf("%lf", &fNummer);
-         //       add_Fkt(fName, fNummer);
+        //        add_Fkt(fName, fNummer);
                 break;
         case 2: printf("Nach Wem?\n");
                 scanf("%s", fName);
@@ -45,9 +45,9 @@ while(1) {
         case 3: printf("Wen Löschen?\n");
                 scanf("%s", fName);
                 getchar();
-         //       delete_Fkt(fName);
+          //      delete_Fkt(fName);
                 break;
-        case 4: //show_Fkt();
+        case 4:// show_Fkt();
                 break;
         case 0: return 0;
                 break;

@@ -73,7 +73,7 @@
 
 
 # Environment 
-MKDIR=mkdirnewcunittest
+MKDIR=mkdir 
 CP=cp
 CCADMIN=CCadmin
 RANLIB=ranlib

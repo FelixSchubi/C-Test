@@ -43,12 +43,16 @@ TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
 # Test Files
 TESTFILES= \
 	${TESTDIR}/TestFiles/f1 \
-	${TESTDIR}/TestFiles/f2
+	${TESTDIR}/TestFiles/f3 \
+	${TESTDIR}/TestFiles/f4 \
+	${TESTDIR}/TestFiles/f5
 
 # Test Object Files
 TESTOBJECTFILES= \
-	${TESTDIR}/tests/Main_Test_File.o \
-	${TESTDIR}/tests/secSuite.o
+	${TESTDIR}/tests/addTest.o \
+	${TESTDIR}/tests/createTest.o \
+	${TESTDIR}/tests/showTest.o \
+	${TESTDIR}/tests/wegTest.o
 
 # C Compiler Flags
 CFLAGS=
@@ -86,25 +90,45 @@ ${OBJECTDIR}/MainFile.o: MainFile.c
 .build-tests-conf: .build-tests-subprojects .build-conf ${TESTFILES}
 .build-tests-subprojects:
 
-${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/Main_Test_File.o ${OBJECTFILES:%.o=%_nomain.o}
+${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/addTest.o ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.c} -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS}   -lcunit 
 
-${TESTDIR}/TestFiles/f2: ${TESTDIR}/tests/secSuite.o ${OBJECTFILES:%.o=%_nomain.o}
+${TESTDIR}/TestFiles/f3: ${TESTDIR}/tests/createTest.o ${OBJECTFILES:%.o=%_nomain.o}
 	${MKDIR} -p ${TESTDIR}/TestFiles
-	${LINK.c} -o ${TESTDIR}/TestFiles/f2 $^ ${LDLIBSOPTIONS}   -lcunit 
+	${LINK.c} -o ${TESTDIR}/TestFiles/f3 $^ ${LDLIBSOPTIONS}   -lcunit 
+
+${TESTDIR}/TestFiles/f4: ${TESTDIR}/tests/showTest.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.c} -o ${TESTDIR}/TestFiles/f4 $^ ${LDLIBSOPTIONS}   -lcunit 
+
+${TESTDIR}/TestFiles/f5: ${TESTDIR}/tests/wegTest.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.c} -o ${TESTDIR}/TestFiles/f5 $^ ${LDLIBSOPTIONS}   -lcunit 
 
 
-${TESTDIR}/tests/Main_Test_File.o: tests/Main_Test_File.c 
+${TESTDIR}/tests/addTest.o: tests/addTest.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/Main_Test_File.o tests/Main_Test_File.c
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/addTest.o tests/addTest.c
 
 
-${TESTDIR}/tests/secSuite.o: tests/secSuite.c 
+${TESTDIR}/tests/createTest.o: tests/createTest.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/secSuite.o tests/secSuite.c
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/createTest.o tests/createTest.c
+
+
+${TESTDIR}/tests/showTest.o: tests/showTest.c 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/showTest.o tests/showTest.c
+
+
+${TESTDIR}/tests/wegTest.o: tests/wegTest.c 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/wegTest.o tests/wegTest.c
 
 
 ${OBJECTDIR}/MainFile_nomain.o: ${OBJECTDIR}/MainFile.o MainFile.c 
@@ -125,7 +149,9 @@ ${OBJECTDIR}/MainFile_nomain.o: ${OBJECTDIR}/MainFile.o MainFile.c
 	@if [ "${TEST}" = "" ]; \
 	then  \
 	    ${TESTDIR}/TestFiles/f1 || true; \
-	    ${TESTDIR}/TestFiles/f2 || true; \
+	    ${TESTDIR}/TestFiles/f3 || true; \
+	    ${TESTDIR}/TestFiles/f4 || true; \
+	    ${TESTDIR}/TestFiles/f5 || true; \
 	else  \
 	    ./${TEST} || true; \
 	fi

@@ -23,7 +23,8 @@ struct Fahrrad {
 
 
 void create_Fkt(){
-    front = rear = NULL;
+    front =  rear = NULL;
+   // front = 1;
 }
 
 #endif
